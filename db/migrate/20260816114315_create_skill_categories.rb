@@ -5,6 +5,6 @@ class CreateSkillCategories < ActiveRecord::Migration[8.1]
 
       t.timestamps
     end
-    add_index :skill_categories, :name, unique: true
+    add_index :skill_categories, :name
   end
 end
