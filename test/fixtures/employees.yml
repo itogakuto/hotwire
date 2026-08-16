@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team: one
+  name: MyString
+  role: MyString
+  grade: MyString
+  years_of_experience: 1
+  current_project: MyString
+  experience_summary: MyText
+  desired_role: MyString
+  interests: MyText
+
+two:
+  team: two
+  name: MyString
+  role: MyString
+  grade: MyString
+  years_of_experience: 1
+  current_project: MyString
+  experience_summary: MyText
+  desired_role: MyString
+  interests: MyText
