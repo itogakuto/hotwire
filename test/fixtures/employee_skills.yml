@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  employee: one
+  skill: one
+  current_level: 1
+  target_level: 1
+  practical_experience: false
+  experience_months: 1
+  self_assessed: false
+  manager_verified: false
+
+two:
+  employee: two
+  skill: two
+  current_level: 1
+  target_level: 1
+  practical_experience: false
+  experience_months: 1
+  self_assessed: false
+  manager_verified: false

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  skill_category: one
+  name: MyString
+  important: false
+
+two:
+  skill_category: two
+  name: MyString
+  important: false
