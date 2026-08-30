@@ -18,6 +18,18 @@ JavaScript は Importmap、Tailwind CSS は Ruby gem 経由で利用するため
 - Ruby 3.3.11（`.ruby-version` を参照）
 - Bundler 4.0.16（`Gemfile.lock` を参照）
 - SQLite 3
+- libvips（画像処理に使用）
+
+libvips が未インストールの場合は、OS に合わせて追加してください。
+
+```bash
+# macOS（Homebrew）
+brew install vips
+
+# Ubuntu / Debian
+sudo apt-get update
+sudo apt-get install --no-install-recommends libvips
+```
 
 Ruby のバージョン管理には mise、rbenv、asdf などを利用できます。Bundler が未インストールの場合は次のコマンドで追加してください。
 
