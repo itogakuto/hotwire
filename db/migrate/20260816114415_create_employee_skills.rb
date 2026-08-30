@@ -13,7 +13,7 @@ class CreateEmployeeSkills < ActiveRecord::Migration[8.1]
       t.timestamps
     end
     add_index :employee_skills,
-      [:employee_id, :skill_id],
+      [ :employee_id, :skill_id ],
       unique: true
 
     add_check_constraint :employee_skills,

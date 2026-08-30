@@ -1,11 +1,15 @@
+# The locked Brakeman version is installed by Bundler. Checking RubyGems for a
+# newer release makes the scan depend on external availability.
+ENV["BRAKEMAN_ENSURE_LATEST"] = "false"
+
 # Run using bin/ci
 
 CI.run do
   step "Setup", "bin/setup --skip-server"
 
-  step "Style: Ruby", "bin/rubocop"
+  step "Style: Ruby", "bin/rubocop --cache-root tmp/rubocop_cache"
 
-  step "Security: Gem audit", "bin/bundler-audit"
+  step "Security: Gem audit", "bin/bundler-audit check --database tmp/ruby-advisory-db --update"
   step "Security: Importmap vulnerability audit", "bin/importmap audit"
   step "Security: Brakeman code analysis", "bin/brakeman --quiet --no-pager --exit-on-warn --exit-on-error"
   step "Tests: Rails", "bin/rails test"

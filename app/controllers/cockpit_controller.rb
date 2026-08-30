@@ -49,7 +49,7 @@ class CockpitController < ApplicationController
       EmployeeSkill
         .where(employee_id: employee_ids, skill_id: skill_ids)
         .index_by { |employee_skill|
-          [employee_skill.employee_id, employee_skill.skill_id]
+          [ employee_skill.employee_id, employee_skill.skill_id ]
         }
 
     team_skill_records =

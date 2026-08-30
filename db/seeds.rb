@@ -7,25 +7,25 @@ end
 
 teams = {}
 
-["プラットフォーム開発部", "業務アプリ開発部"].each do |name|
+[ "プラットフォーム開発部", "業務アプリ開発部" ].each do |name|
   teams[name] = find_or_update(Team, { name: name })
 end
 
 categories = {}
 
-["Web開発", "クラウド", "データ", "マネジメント"].each do |name|
+[ "Web開発", "クラウド", "データ", "マネジメント" ].each do |name|
   categories[name] = find_or_update(SkillCategory, { name: name })
 end
 
 skills = {}
 
 [
-  ["Rails", "Web開発", true],
-  ["Java", "Web開発", true],
-  ["AWS", "クラウド", true],
-  ["Docker", "クラウド", false],
-  ["SQL", "データ", true],
-  ["PM", "マネジメント", true]
+  [ "Rails", "Web開発", true ],
+  [ "Java", "Web開発", true ],
+  [ "AWS", "クラウド", true ],
+  [ "Docker", "クラウド", false ],
+  [ "SQL", "データ", true ],
+  [ "PM", "マネジメント", true ]
 ].each do |name, category_name, important|
   skills[name] = find_or_update(
     Skill,
@@ -122,32 +122,32 @@ end
 # 社員名、スキル名、現在レベル、目標レベル、実務経験、
 # 経験月数、上司確認済み、最終更新からの月数
 assignments = [
-  ["佐藤 花子", "Rails", 4, 5, true, 72, true, 1],
-  ["佐藤 花子", "SQL", 4, 4, true, 60, true, 1],
-  ["佐藤 花子", "AWS", 3, 4, true, 30, true, 2],
-  ["佐藤 花子", "PM", 2, 3, false, 12, false, 2],
+  [ "佐藤 花子", "Rails", 4, 5, true, 72, true, 1 ],
+  [ "佐藤 花子", "SQL", 4, 4, true, 60, true, 1 ],
+  [ "佐藤 花子", "AWS", 3, 4, true, 30, true, 2 ],
+  [ "佐藤 花子", "PM", 2, 3, false, 12, false, 2 ],
 
-  ["鈴木 健", "Rails", 3, 4, true, 36, true, 8],
-  ["鈴木 健", "SQL", 3, 4, true, 30, true, 2],
-  ["鈴木 健", "AWS", 1, 3, false, 3, false, 2],
-  ["鈴木 健", "Docker", 2, 3, true, 12, false, 3],
+  [ "鈴木 健", "Rails", 3, 4, true, 36, true, 8 ],
+  [ "鈴木 健", "SQL", 3, 4, true, 30, true, 2 ],
+  [ "鈴木 健", "AWS", 1, 3, false, 3, false, 2 ],
+  [ "鈴木 健", "Docker", 2, 3, true, 12, false, 3 ],
 
-  ["高橋 美咲", "AWS", 4, 5, true, 48, true, 1],
-  ["高橋 美咲", "Docker", 4, 5, true, 42, true, 1],
-  ["高橋 美咲", "SQL", 3, 4, true, 24, true, 2],
-  ["高橋 美咲", "Rails", 2, 3, false, 8, false, 3],
+  [ "高橋 美咲", "AWS", 4, 5, true, 48, true, 1 ],
+  [ "高橋 美咲", "Docker", 4, 5, true, 42, true, 1 ],
+  [ "高橋 美咲", "SQL", 3, 4, true, 24, true, 2 ],
+  [ "高橋 美咲", "Rails", 2, 3, false, 8, false, 3 ],
 
-  ["田中 優", "Rails", 2, 3, true, 10, false, 5],
-  ["田中 優", "SQL", 2, 3, false, 6, false, 4],
-  ["田中 優", "Docker", 1, 2, false, 2, false, 3],
+  [ "田中 優", "Rails", 2, 3, true, 10, false, 5 ],
+  [ "田中 優", "SQL", 2, 3, false, 6, false, 4 ],
+  [ "田中 優", "Docker", 1, 2, false, 2, false, 3 ],
 
-  ["伊藤 翔", "Java", 4, 5, true, 72, true, 7],
-  ["伊藤 翔", "SQL", 4, 4, true, 60, true, 2],
-  ["伊藤 翔", "PM", 2, 3, true, 18, false, 3],
+  [ "伊藤 翔", "Java", 4, 5, true, 72, true, 7 ],
+  [ "伊藤 翔", "SQL", 4, 4, true, 60, true, 2 ],
+  [ "伊藤 翔", "PM", 2, 3, true, 18, false, 3 ],
 
-  ["山本 葵", "PM", 4, 5, true, 84, true, 1],
-  ["山本 葵", "Java", 2, 3, true, 20, false, 2],
-  ["山本 葵", "SQL", 2, 3, true, 24, false, 2]
+  [ "山本 葵", "PM", 4, 5, true, 84, true, 1 ],
+  [ "山本 葵", "Java", 2, 3, true, 20, false, 2 ],
+  [ "山本 葵", "SQL", 2, 3, true, 24, false, 2 ]
 ]
 
 assignments.each do |
