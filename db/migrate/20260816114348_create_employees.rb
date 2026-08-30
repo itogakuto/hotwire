@@ -13,7 +13,7 @@ class CreateEmployees < ActiveRecord::Migration[8.1]
 
       t.timestamps
     end
-    add_index :employees, [:team_id, :name]
+    add_index :employees, [ :team_id, :name ]
     add_check_constraint :employees,
       "years_of_experience >= 0",
       name: "employees_years_of_experience_non_negative"
